@@ -1,0 +1,36 @@
+<Page x:Class="TVMovieSample.Views.Shell"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="using:Template10.Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:views="using:TVMovieSample.Views" mc:Ignorable="d">
+
+    <controls:ModalDialog IsModal="{x:Bind IsBusy, Mode=OneWay}">
+        <controls:ModalDialog.Content>
+            <controls:HamburgerMenu x:Name="MyHamburgerMenu" IsFullScreen="False">
+                <controls:HamburgerMenu.PrimaryButtons>
+                    <controls:HamburgerButtonInfo PageType="views:MainPage">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Width="48" Height="48" Symbol="Home" />
+                            <TextBlock Margin="12,0,0,0" VerticalAlignment="Center" Text="Home" />
+                        </StackPanel>
+                    </controls:HamburgerButtonInfo>
+                </controls:HamburgerMenu.PrimaryButtons>
+            </controls:HamburgerMenu>
+
+        </controls:ModalDialog.Content>
+        <controls:ModalDialog.ModalContent>
+
+            <Viewbox Height="32">
+                <StackPanel Orientation="Horizontal">
+                    <ProgressRing Width="16" Height="16"
+                                  Margin="12,0" Foreground="White"
+                                  IsActive="{x:Bind IsBusy, Mode=OneWay}" />
+                    <TextBlock VerticalAlignment="Center" Foreground="White" Text="{x:Bind BusyText, Mode=OneWay}" />
+                </StackPanel>
+            </Viewbox>
+
+        </controls:ModalDialog.ModalContent>
+    </controls:ModalDialog>
+</Page>
