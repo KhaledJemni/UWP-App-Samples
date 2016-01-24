@@ -19,6 +19,10 @@
                 <behaviors:EllipsisBehavior Visibility="Auto" />
             </interactivity:Interaction.Behaviors>
         </controls:PageHeader>
+        
+        <RelativePanel Grid.Row="1">
+            <GridView x:Name="Featured" Height="180" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" />
+        </RelativePanel>
     </Grid>
 </Page>
 

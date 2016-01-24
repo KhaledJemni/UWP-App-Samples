@@ -1,0 +1,28 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:colors="using:Croft.Core.Xaml.Converters.Colors">
+
+    <colors:BrushToPrimaryAccentColorConverter x:Key="BrushToPrimaryAccentColorConverter" />
+    <colors:BrushToDarkAccentColorConverter x:Key="BrushToDarkAccentColorConverter" />
+    <colors:BrushToLightAccentColorConverter x:Key="BrushToLightAccentColorConverter" />
+
+    <Color x:Key="CustomColor">SteelBlue</Color>
+    <Color x:Key="ContrastColor">White</Color>
+    <Color x:Key="DarkColor">Black</Color>
+
+    <SolidColorBrush x:Key="ModalBackground" Opacity=".5" Color="{Binding Source={StaticResource CustomColorBrush}, Converter={StaticResource BrushToDarkAccentColorConverter}}" />
+
+    <SolidColorBrush x:Key="ExtendedSplashBackground" Color="{StaticResource ContrastColor}" />
+    <SolidColorBrush x:Key="ExtendedSplashForeground" Color="{Binding Source={StaticResource CustomColorBrush}, Converter={StaticResource BrushToDarkAccentColorConverter}}" />
+   
+    <SolidColorBrush x:Key="CustomColorBrush" Color="{StaticResource CustomColor}" />
+    <SolidColorBrush x:Key="ContrastColorBrush" Color="{StaticResource ContrastColor}" />
+    <SolidColorBrush x:Key="DarkColorBrush" Color="{StaticResource DarkColor}" />
+    
+    <SolidColorBrush x:Key="AccentColorBrush" Color="{Binding Source={StaticResource CustomColorBrush}, Converter={StaticResource BrushToPrimaryAccentColorConverter}}" />
+    <SolidColorBrush x:Key="LightAccentColorBrush" Color="{Binding Source={StaticResource CustomColorBrush}, Converter={StaticResource BrushToLightAccentColorConverter}}" />
+    <SolidColorBrush x:Key="DarkAccentColorBrush" Color="{Binding Source={StaticResource CustomColorBrush}, Converter={StaticResource BrushToDarkAccentColorConverter}}" />
+
+
+</ResourceDictionary>
