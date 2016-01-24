@@ -10,7 +10,7 @@
         <controls:ModalDialog.Content>
             <controls:HamburgerMenu x:Name="MyHamburgerMenu" IsFullScreen="False">
                 <controls:HamburgerMenu.PrimaryButtons>
-                    <controls:HamburgerButtonInfo PageType="views:MainPage">
+                    <controls:HamburgerButtonInfo ClearHistory="True" PageType="views:MainPage">
                         <StackPanel Orientation="Horizontal">
                             <SymbolIcon Width="48" Height="48" Symbol="Home" />
                             <TextBlock Margin="12,0,0,0" VerticalAlignment="Center" Text="Home" />

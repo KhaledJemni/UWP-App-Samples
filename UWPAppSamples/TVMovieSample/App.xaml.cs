@@ -2,12 +2,13 @@ namespace TVMovieSample
 {
     using System.Threading.Tasks;
 
-    using Windows.ApplicationModel.Activation;
-    using Windows.UI.Xaml;
-
     using Template10.Services.NavigationService;
 
     using TVMovieSample.Views;
+
+    using Windows.ApplicationModel.Activation;
+    using Windows.UI.ViewManagement;
+    using Windows.UI.Xaml;
 
     public sealed partial class App
     {
@@ -37,6 +38,8 @@ namespace TVMovieSample
 
             // navigate to first page
             NavigationService.Navigate(typeof(MainPage));
+
+  
         }
     }
 }

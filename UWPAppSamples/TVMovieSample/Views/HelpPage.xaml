@@ -8,7 +8,12 @@
     xmlns:controls="using:Template10.Controls"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:behaviors="using:Template10.Behaviors"
+    xmlns:viewModels="using:TVMovieSample.ViewModels"
     mc:Ignorable="d">
+    
+    <Page.DataContext>
+        <viewModels:HelpPageViewModel />
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource AccentColorBrush}">
         <Grid.RowDefinitions>

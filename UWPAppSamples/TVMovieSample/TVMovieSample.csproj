@@ -107,6 +107,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\TV\ITVShowService.cs" />
     <Compile Include="Services\TV\TVShowService.cs" />
+    <Compile Include="ViewModels\HelpPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="Views\HelpPage.xaml.cs">
       <DependentUpon>HelpPage.xaml</DependentUpon>
